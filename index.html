@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Свадьба Алёнки и Димки</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #111;
+    text-align: center;
+}
+
+/* ОБЛОЖКА */
+.cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("photo.jpg") center/cover no-repeat;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.date {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.block {
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #111;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* ГАЛЕРЕЯ */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+<div class="section fade">
+    <h2>Для нас важно 🤍</h2>
+
+    <p>
+        Этот день для нас — не про масштаб и пышность,  
+        а про искренность, тепло и близость.
+    </p>
+
+    <p>
+        Мы хотим провести его в кругу самых родных и важных для нас людей,  
+        разделить эмоции, улыбки и этот момент вместе с вами.
+    </p>
+
+    <p>
+        Спасибо, что вы рядом 🤍
+    </p>
+</div>
+
+/* ТАЙМИНГ */
+.timeline {
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #111;
+}
+
+.event {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    background: #111;
+    border-radius: 50%;
+}
+
+/* КАРТА */
+iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    margin-top: 10px;
+}
+
+/* АНИМАЦИЯ */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ОБЛОЖКА -->
+<div class="cover">
+    <h1>Алёнка & Димка</h1>
+    <div class="date">26 июня 2026</div>
+    <p>Мы будем счастливы разделить этот день с вами 🤍</p>
+</div>
+
+<!-- ГАЛЕРЕЯ -->
+<div class="section fade">
+    <h2>Наши моменты</h2>
+    <div class="gallery">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+	<img src="photo4.jpg"> 
+    </div>
+</div>
+
+<!-- МЕСТО -->
+<div class="section fade">
+    <h2>Место проведения</h2>
+
+    <div class="block">
+        <p><strong>ЗАГС</strong><br>г. Южно-Сахалинск</p>
+
+        <a href="https://yandex.ru/maps/?text=ЗАГС Южно-Сахалинск" target="_blank">
+            <button>Открыть на карте</button>
+        </a>
+
+        <iframe src="https://yandex.ru/map-widget/v1/?text=ЗАГС%20Южно-Сахалинск"></iframe>
+    </div>
+
+    <div class="block">
+        <p><strong>Ресторан «Шафран»</strong><br>ул. Ленина, 120А</p>
+
+        <a href="https://yandex.ru/maps/?text=Шафран Ленина 120А Южно-Сахалинск" target="_blank">
+            <button>Открыть на карте</button>
+        </a>
+
+        <iframe src="https://yandex.ru/map-widget/v1/?text=Шафран%20Ленина%20120А%20Южно-Сахалинск"></iframe>
+    </div>
+</div>
+
+<!-- ТАЙМИНГ -->
+<div class="section fade">
+    <h2>Программа дня</h2>
+
+    <div class="timeline">
+        <div class="event"><div class="time">16:00</div>Сбор гостей у ЗАГС</div>
+        <div class="event"><div class="time">16:20</div>Регистрация</div>
+        <div class="event"><div class="time">16:40</div>Фотосессия</div>
+        <div class="event"><div class="time">17:30</div>Ужин в ресторане</div>
+    </div>
+</div>
+
+<!-- RSVP -->
+<div class="section fade">
+    <h2>Подтверждение присутствия (включи vpn)</h2>
+
+    <a href="https://t.me/khitroova?text=Я%20приду%20на%20свадьбу" target="_blank">
+        <button>Я приду 💌</button>
+    </a>
+
+    <a href="https://t.me/khitroova?text=Не%20смогу%20прийти" target="_blank">
+        <button>Не смогу 😔</button>
+    </a>
+</div>
+
+<script>
+const items = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {18:48 19.04.2026
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+items.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
